@@ -71,7 +71,13 @@ php artisan serve
 ```
  E a partir disso, você estará apto para ver o sistema sendo executado no browser. Acredito que a URL para acesso seja:
 ```sh
-http://localhost:8080/
+http://localhost:8000/
+```
+
+Ao executar o comando deverá aparecer uma mensagem no terminal, ou promp de comando, assim:
+
+```sh
+Laravel development server started on http://localhost:8000/
 ```
 
 [//]: # (Links para referência)
