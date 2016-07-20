@@ -56,7 +56,7 @@ cd caminho/para/sistema/warehouse-system/
 Em seguida, insira o seguinte código:
 
 ```sh
-php artisan migrations:migrate
+php artisan migrate
 ```
 
 A partir disso, o sistema irá construir todas as tabelas no banco e irá executar o seeding, que é um processo de popular as tabelas com dados prévios.
