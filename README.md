@@ -1,7 +1,6 @@
-# Warehouse Transfer Control
-by grgtr.io
-
 # Warehouse-system
+by grgtr.io
+@grglucastr
 
 Este é um sistema para controle de transferência de bens entre Warehouses.
 
