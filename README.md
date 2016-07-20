@@ -21,7 +21,7 @@ Logo após clonar este repositório, você deverá executar os seguintes passos 
 Crie o banco de dados no MySQL
 
 ```sh
-    create database warehouse-system-db
+    create database warehouse_system_db
 ```
 
 ### 2º Passo: As informações do seu banco de dados no sistema
@@ -33,7 +33,7 @@ e abra o arquivo .env com seu editor de texto (sugiro SublimeText ou Visual Stud
 
 * DB_HOST=<Seu endereço de acesso ao banco> (Geralmente é o localhost)
 * DB_PORT=<Porta do banco> (Geralmente é a 3306)
-* DB_DATABASE=warehouse-system-db
+* DB_DATABASE=warehouse_system_db
 * DB_USERNAME=<Seu nome de Usuário>
 * DB_PASSWORD=<Sua senha>
 
