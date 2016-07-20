@@ -29,13 +29,13 @@ Altere os parâmetros do banco de dados nas variáveis de ambiente do sistema. A
 ```sh
 caminho/para/sistema/warehouse-system/
 ```
-e abra o arquivo .env com seu editor de texto (sugiro SublimeText ou Visual Studio Code) e altere as informações, tais como:
+e abra o arquivo .env com seu editor de texto (sugiro SublimeText ou Visual Studio Code) e altere as informações para o contexto do seu ambiente de desenvolvimento. As informações são:
 
-* DB_HOST=<Seu endereço de acesso ao banco> (Geralmente é o localhost)
-* DB_PORT=<Porta do banco> (Geralmente é a 3306)
+* DB_HOST= Seu endereço de acesso ao banco (Geralmente é o localhost)
+* DB_PORT= Porta do banco (Geralmente é a 3306)
 * DB_DATABASE=warehouse_system_db
-* DB_USERNAME=<Seu nome de Usuário>
-* DB_PASSWORD=<Sua senha>
+* DB_USERNAME= Seu nome de Usuário do banco de dados
+* DB_PASSWORD= Sua senha de banco de dados
 
 Em seguida, edite as informações do arquivo database.php a partir da linha 57 com os dados do seu banco de dados. O arquivo database.php encontra-se no diretório descrito abaixo:
 
