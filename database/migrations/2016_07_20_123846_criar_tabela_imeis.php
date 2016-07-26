@@ -12,34 +12,34 @@ class CriarTabelaImeis extends Migration
      */
     public function up()
     {
-        Schema::create("imeis", function(Blueprint $table){
+        Schema::create("imei", function(Blueprint $table){
             $table->increments("id");
             $table->string("code");
             $table->integer("product_id")->unsigned()->index();
             $table->integer("master_id")->unsigned()->index();
             $table->integer("status_id")->unsigned()->index();
-            $table->integer("warehouse_current_id")->unsigned()->index();
-            $table->integer("warehouse_destiny_id")->unsigned()->index();
+            $table->integer("warehouse_current")->unsigned()->index();
+            $table->integer("warehouse_destiny")->unsigned()->index();
 
             $table->foreign("product_id")->references("id")
-                                         ->on("products")
+                                         ->on("product")
                                          ->onDelete("cascade");
             
             
             $table->foreign("master_id")->references("id")
-                                        ->on("masters")
+                                        ->on("master")
                                         ->onDelete("cascade");
             
             $table->foreign("status_id")->references("id")
                                         ->on("status")
                                         ->onDelete("cascade");
 
-            $table->foreign("warehouse_current_id")->references("id")
-                                                   ->on("warehouses")
+            $table->foreign("warehouse_current")->references("id")
+                                                   ->on("warehouse")
                                                    ->onDelete("cascade");
 
-            $table->foreign("warehouse_destiny_id")->references("id")
-                                                   ->on("warehouses")
+            $table->foreign("warehouse_destiny")->references("id")
+                                                   ->on("warehouse")
                                                    ->onDelete("cascade");
         });
     }
@@ -51,6 +51,6 @@ class CriarTabelaImeis extends Migration
      */
     public function down()
     {
-        Schema::drop("imeis");
+        Schema::drop("imei");
     }
 }

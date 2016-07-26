@@ -12,28 +12,28 @@ class CriarTabelaMasters extends Migration
      */
     public function up()
     {
-        Schema::create("masters", function(Blueprint $table){
+        Schema::create("master", function(Blueprint $table){
             $table->increments("id");
             $table->string("code");
             $table->integer("pallet_id")->unsigned()->index();
             $table->integer("status_id")->unsigned()->index();
-            $table->integer("warehouse_current_id")->unsigned()->index();
-            $table->integer("warehouse_destiny_id")->unsigned()->index();
+            $table->integer("warehouse_current")->unsigned()->index();
+            $table->integer("warehouse_destiny")->unsigned()->index();
 
             $table->foreign("pallet_id")->references("id")
-                                        ->on("pallets")
+                                        ->on("pallet")
                                         ->onDelete("cascade");
             
             $table->foreign("status_id")->references("id")
                                         ->on("status")
                                         ->onDelete("cascade");
 
-            $table->foreign("warehouse_current_id")->references("id")
-                                                ->on("warehouses")
+            $table->foreign("warehouse_current")->references("id")
+                                                ->on("warehouse")
                                                 ->onDelete("cascade");
 
-            $table->foreign("warehouse_destiny_id")->references("id")
-                                                ->on("warehouses")
+            $table->foreign("warehouse_destiny")->references("id")
+                                                ->on("warehouse")
                                                 ->onDelete("cascade");
         });
     }
@@ -45,6 +45,6 @@ class CriarTabelaMasters extends Migration
      */
     public function down()
     {
-        Schema::drop("masters");
+        Schema::drop("master");
     }
 }

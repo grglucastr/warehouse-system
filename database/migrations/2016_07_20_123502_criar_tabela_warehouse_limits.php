@@ -12,17 +12,17 @@ class CriarTabelaWarehouseLimits extends Migration
      */
     public function up()
     {
-        Schema::create("warehouses_limits", function(Blueprint $table){
+        Schema::create("warehouse_limits", function(Blueprint $table){
             $table->increments("id");
             $table->integer("warehouse_origin_id")->unsigned()->index();
-            $table->integer("warehouse_destiny_id")->unsigned()->index();
+            $table->integer("warehouse_target_id")->unsigned()->index();
             
             $table->foreign("warehouse_origin_id")->references("id")
-                  ->on("warehouses")
+                  ->on("warehouse")
                   ->onDelete("cascade");
 
-            $table->foreign("warehouse_destiny_id")->references("id")
-                  ->on("warehouses")
+            $table->foreign("warehouse_target_id")->references("id")
+                  ->on("warehouse")
                   ->onDelete("cascade");
 
             $table->decimal("limit")->unsigned();     
@@ -36,6 +36,6 @@ class CriarTabelaWarehouseLimits extends Migration
      */
     public function down()
     {
-        Schema::drop("warehouses_limits");
+        Schema::drop("warehouse_limits");
     }
 }

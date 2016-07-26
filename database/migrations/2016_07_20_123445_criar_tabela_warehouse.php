@@ -12,7 +12,7 @@ class CriarTabelaWarehouse extends Migration
      */
     public function up()
     {
-        Schema::create("warehouses", function(Blueprint $table){
+        Schema::create("warehouse", function(Blueprint $table){
             $table->increments("id");
             $table->string("label");
         });
@@ -25,6 +25,6 @@ class CriarTabelaWarehouse extends Migration
      */
     public function down()
     {
-        Schema::drop("warehouses");
+        Schema::drop("warehouse");
     }
 }

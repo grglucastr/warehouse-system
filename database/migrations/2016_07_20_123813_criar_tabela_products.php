@@ -12,9 +12,10 @@ class CriarTabelaProducts extends Migration
      */
     public function up()
     {
-        Schema::create("products", function(Blueprint $table){
+        Schema::create("product", function(Blueprint $table){
             $table->increments("id");
-            $table->string("description");
+            $table->string("code");
+            $table->string("commercial_name");
             $table->decimal("unitary_price")->unsigned();
         });
     }
@@ -26,6 +27,6 @@ class CriarTabelaProducts extends Migration
      */
     public function down()
     {
-        Schema::drop("products");
+        Schema::drop("product");
     }
 }
