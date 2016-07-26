@@ -4,50 +4,50 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Warehouses extends Model
+class Warehouse extends Model
 {
-    protected $table = "warehouses";
+    protected $table = "warehouse";
     public $timestamps = false;
     
     // ---- Funções de relacionamento
 
     public function pallets_current_warehouses()
     {
-        $this->hasMany("\App\Pallets", "warehouse_current_id");
-    }
-
-    public function masters_current_warehouses()
-    {
-        $this->hasMany("\App\Masters", "warehouse_current_id");
-    }
-
-    public function imeis_current_warehouses()
-    {
-        $this->hasMany("\App\IMEIS", "warehouse_current_id");
+        $this->hasMany("\App\Pallet", "warehouse_current");
     }
 
     public function pallets_destiny_warehouses()
     {
-        $this->hasMany("\App\Pallets", "warehouse_destiny_id");
+        $this->hasMany("\App\Pallet", "warehouse_destiny");
+    }
+
+    public function masters_current_warehouses()
+    {
+        $this->hasMany("\App\Master", "warehouse_current");
     }
 
     public function masters_destiny_warehouses()
     {
-        $this->hasMany("\App\Masters", "warehouse_destiny_id");
+        $this->hasMany("\App\Master", "warehouse_destiny");
+    }
+
+    public function imeis_current_warehouses()
+    {
+        $this->hasMany("\App\IMEI", "warehouse_current");
     }
 
     public function imeis_destiny_warehouses()
     {
-        $this->hasMany("\App\IMEIS", "warehouse_destiny_id");
+        $this->hasMany("\App\IMEI", "warehouse_destiny");
     }
 
     public function warehouse_limit_origin_warehouses()
     {
-        $this->hasMany("\App\IMEIS", "warehouse_origin_id");
+        $this->hasMany("\App\WarehouseLimits", "warehouse_origin_id");
     }
 
-    public function warehouse_limit_destiny_warehouses()
+    public function warehouse_limit_target_warehouses()
     {
-        $this->hasMany("\App\IMEIS", "warehouse_destiny_id");
+        $this->hasMany("\App\WarehouseLimits", "warehouse_target_id");
     }
 }

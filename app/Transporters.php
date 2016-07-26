@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Transporters extends Model
+class Transporter extends Model
 {
-    protected $table = "transporters";
+    protected $table = "transporter";
     public $timestamps = false;
 }

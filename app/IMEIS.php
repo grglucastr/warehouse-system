@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class IMEIS extends Model
+class IMEI extends Model
 {
-    protected $table = "imeis";
+    protected $table = "imei";
     public $timestamps = false;
 
     
@@ -14,12 +14,12 @@ class IMEIS extends Model
     
     public function product()
     {
-        $this->belongsTo("\App\Products", "product_id");
+        $this->belongsTo("\App\Product", "product_id");
     }
 
     public function master()
     {
-        $this->belongsTo("\App\Masters", "master_id");
+        $this->belongsTo("\App\Master", "master_id");
     }
 
     public function status()
@@ -29,11 +29,11 @@ class IMEIS extends Model
 
     public function warehouse_current()
     {
-        $this->belongsTo("\App\Warehouses", "warehouse_current_id");
+        $this->belongsTo("\App\Warehouse", "warehouse_current");
     }
 
     public function warehouse_destiny()
     {
-        $this->belongsTo("\App\Warehouses", "warehouse_destiny_id");
+        $this->belongsTo("\App\Warehouse", "warehouse_destiny");
     }
 }

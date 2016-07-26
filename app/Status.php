@@ -13,16 +13,16 @@ class Status extends Model
       
     public function pallets()
     {
-        $this->hasMany("\App\Pallets", "status_id");
+        $this->hasMany("\App\Pallet", "status_id");
     }
 
     public function masters()
     {
-        $this->hasMany("\App\Masters", "status_id");
+        $this->hasMany("\App\Master", "status_id");
     }
 
     public function imeis()
     {
-        $this->hasMany("\App\IMEIS", "status_id");
+        $this->hasMany("\App\IMEI", "status_id");
     }
 }

@@ -4,19 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WarehousesLimits extends Model
+class WarehouseLimits extends Model
 {
-    protected $table = "warehouses_limits";
+    protected $table = "warehouse_limits";
     public $timestamps = false;
 
     // ---- Funções de relacionamento
     public function warehouse_origin()
     {
-        $this->belongsTo("\App\Warehouses", "warehouse_origin_id");
+        $this->belongsTo("\App\Warehouse", "warehouse_origin_id");
     }
 
-    public function warehouse_destiny()
+    public function warehouse_target()
     {
-        $this->belongsTo("\App\Warehouses", "warehouse_destiny_id");
+        $this->belongsTo("\App\Warehouse", "warehouse_target_id");
     }
 }
