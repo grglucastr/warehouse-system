@@ -1,0 +1,28 @@
+{
+  "name": "warehouse-system",
+  "description": "A system to control the transference of goods between warehouses",
+  "main": "",
+  "authors": [
+    "George Bentes <george.bentes@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "warehouse",
+    "system",
+    "php",
+    "laravel",
+    "mysql"
+  ],
+  "homepage": "https://github.com/grglucastr/warehouse-system",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
