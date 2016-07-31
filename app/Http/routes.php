@@ -11,6 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+
+Route::get('/', 'TransferenciaWarehouseController@index');
+Route::get('/realizar-transferencia',
+           'TransferenciaWarehouseController@goPageRealizarTransferencia');
