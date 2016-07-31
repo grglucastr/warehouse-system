@@ -1,0 +1,35 @@
+html, body{
+    height: 100% !important;
+}
+
+#main-container{
+    height: 100%;
+}
+
+#main-container-row{
+    height: 100%;
+}
+
+#sidebar{
+    background:#2a2c36;
+    color:#eee;
+    height: 100% !important;
+}
+
+#content{
+    background-color: #ccc;
+    min-height: 100% !important;
+}
+
+.divider {
+    height: 1px;
+    width:100%;
+    display:block; /* for use on default inline elements like span */
+    margin: 9px 0 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.btn{
+
+}
