@@ -6,6 +6,8 @@
         <title>Warehouse System - @yield('title')</title>
         <link href="{{URL::asset('/libs/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 
+        <link href="{{URL::asset('/libs/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+
         <link rel="stylesheet" href="{{URL::asset('/css/site.css')}}">
     </head>
     <body>
