@@ -12,7 +12,7 @@
 
 <div class="row">
     <div class="col-md-7">
-        <form action="" class="form-horizontal">
+        <form action="" class="form-horizontal margin-left-form">
             <div class="form-group">
                 <div class="col-sm-10">
                     <div class="checkbox">
@@ -34,12 +34,8 @@
                     </select>
                 </div>
                 <div class="col-sm-2">
-                    <button class="btn btn-warning pull-right">Adicionar</button>
+                    <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#modalIMEI">Adicionar</button>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-12">Masters para transferência</label>
             </div>
             <div class="form-group">
                 <table class="col-sm-12 table table-striped">
@@ -70,6 +66,24 @@
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalIMEI" tabindex="-1" role="dialog" aria-labelledby="modalIMEI">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
     </div>
 </div>
 
