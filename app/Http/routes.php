@@ -19,5 +19,11 @@ Route::get('/', function () {
 
 
 Route::get('/', 'TransferenciaWarehouseController@index');
-Route::get('/realizar-transferencia',
-           'TransferenciaWarehouseController@goPageRealizarTransferencia');
+Route::get('/realizar-transferencia-stage-1',
+           'TransferenciaWarehouseController@goPageRealizarTransferenciaStage1');
+
+Route::post('/transferencia-stage-1',
+            'TransferenciaWarehouseController@postTransferenciaStage1');
+
+Route::get('/realizar-transferencia-stage-2',
+           'TransferenciaWarehouseController@goPageRealizarTransferenciaStage2');
