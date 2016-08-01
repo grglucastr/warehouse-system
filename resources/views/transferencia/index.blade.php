@@ -16,7 +16,7 @@
     <div class="col-md-6 col-sm-12">
         <div class="row">
             <div class="col-md-12">
-                <a href="realizar-transferencia" class="btn btn-primary">
+                <a href="realizar-transferencia-stage-1" class="btn btn-primary">
                     Realizar Transferências
                 </a>
                 <button class="btn btn-warning">
