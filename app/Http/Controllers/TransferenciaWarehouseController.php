@@ -14,8 +14,27 @@ class TransferenciaWarehouseController extends Controller
         return view('transferencia.index');
     }
 
-    public function goPageRealizarTransferencia()
+    public function goPageRealizarTransferenciaStage1()
     {
-        return view('transferencia.realizarTransferencia');
+        return view('transferencia.realizarTransferenciaStage1');
+    }
+
+    public function goPageRealizarTransferenciaStage2()
+    {
+        return view('transferencia.realizarTransferenciaStage2');
+    }
+
+    public function postTransferenciaStage1(Request $request)
+    {
+        switch($request->get('acao'))
+        {
+            case 'forward':
+                return redirect('/realizar-transferencia-stage-2');
+
+            case 'save':
+                return back()->withInput();
+
+        }
+
     }
 }
